@@ -46,6 +46,7 @@ LOCAL_APPS = (
     # custom users app
     'photoalbums.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'album',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -208,9 +209,9 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # Some really nice defaults
-ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
 ACCOUNT_ADAPTER = 'photoalbums.users.adapters.AccountAdapter'
