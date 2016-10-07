@@ -1,8 +1,8 @@
 from django.test import TestCase, Client
 
 from photoalbums.users.tests.factories import UserFactory
-from . import factories
-from . import views
+from album import factories
+from album import views
 
 
 # Create your tests here.

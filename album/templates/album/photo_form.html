@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Header</h1>
-    <form method="POST" action="{% url 'album:album-create' %}">
+    <form action="{% url 'album:photo-create' %}" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Submit">
     </form>
 {% endblock %}

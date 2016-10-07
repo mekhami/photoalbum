@@ -3,6 +3,7 @@ from django.core.exceptions import PermissionDenied
 from django.views import generic
 
 from .models import Album, Photo
+from .forms import PhotoForm
 
 
 # Create your views here.
@@ -29,3 +30,8 @@ class AlbumDetail(LoginRequiredMixin, generic.DetailView):
 
 class PhotoDetail(LoginRequiredMixin, generic.DetailView):
     model = Photo
+
+
+class PhotoCreate(LoginRequiredMixin, generic.CreateView):
+    model = Photo
+    form_class = PhotoForm
