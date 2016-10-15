@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Header</h1>
+<h1>{{ object.name }}</h1>
+<a href="{% url 'album:photo-create' object.slug %}"><button class="btn btn-primary" value="Upload Photo">Upload Photo</button></a>
 {% endblock %}
