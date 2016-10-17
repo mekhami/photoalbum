@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Photo Detail</h1>
+{{ object.album.name }}
+<img src="{{ object.photo.url }}">
+{% endblock %}
